@@ -1,0 +1,116 @@
+/* *Estilos generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(177, 207, 145);
+  font-size: 2.5vh;
+}
+
+header{
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h1{
+  font-size: 5vh;
+}
+
+h2{
+  font-size: 2.5vh;
+  text-align: center;
+  color: #FAFAFA;
+}
+
+p{
+  text-align: center;
+}
+
+option, button, select{
+  font-size: 2vh;
+}
+
+main{
+  max-width: 800px;
+  width: 100%;
+}
+
+.container-principal{
+  padding:10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.container-input{
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+#temperature-value{
+  max-width: 70px;
+}
+
+.container-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px
+}
+
+.temperature-card{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(17, 79, 40);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgb(28, 45, 34);
+  text-align: center;
+}
+
+.calculate-value{
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+@media(max-width: 600px) {
+  body{
+    margin: 30px 0;
+    height: 100%;
+  }
+
+  p{
+    text-align: left;
+  }
+
+  .container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inputs{
+    display: flex;
+    gap: 12px;
+  }
+
+  #type-temperature{
+    max-width: 120px;
+  }
+
+}

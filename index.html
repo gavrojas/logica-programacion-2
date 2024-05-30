@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" type="image/png" href="/img/temp.jpg">
+    <title>Conversor temperatura</title>
+  </head>
+  <body>
+    <header>
+      <h1>Conversor de temperatura</h1>
+    </header>
+    <main>
+      <div class="container-principal">
+        <div class="description"><p class="description-centered">Esta página te permite convertir temperaturas entre Celsius, Fahrenheit y Kelvin. Introduce un valor numérico y selecciona la unidad desde donde deseas convertir.</p></div>
+        <div class="container-input">
+          <span class="inputs">
+            <span class="input-temperature">
+              <label id="text-input" for="temperature">Temperatura:</label>
+              <input id="temperature-value" type="number" name="temperature">
+            </span>
+            <span class="input-unit">
+              <label for="unit">Unidad:</label>
+              <select id="type-temperature" name="unit">
+                <option id="default" value="default">Selecciona</option>
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </span>
+          </span>
+          <button id="btn-converter">Convertir</button>
+        </div>
+        <div class="container-cards">
+          <div class="temperature-card">
+            <h2>Celcius</h2>
+            <p id="text-celsius" class="calculate-value"></p>
+          </div>
+          <div class="temperature-card">
+            <h2>Fahrenheit</h2>
+            <p id="text-fahrenheit" class="calculate-value"></p>
+          </div>
+          <div class="temperature-card">
+            <h2>Kelvin</h2>
+            <p id="text-kelvin" class="calculate-value"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
