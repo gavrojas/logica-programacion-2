@@ -16,24 +16,23 @@
     </header>
     <main>
       <div class="container-principal">
-        <div class="description"><p class="description-centered">Esta página te permite convertir temperaturas entre Celsius, Fahrenheit y Kelvin. Introduce un valor numérico y selecciona la unidad desde donde deseas convertir.</p></div>
-        <div class="container-input">
-          <span class="inputs">
-            <span class="input-temperature">
-              <label id="text-input" for="temperature">Temperatura:</label>
-              <input id="temperature-value" type="number" name="temperature">
-            </span>
-            <span class="input-unit">
-              <label for="unit">Unidad:</label>
+        <div class="description">
+          <p class="description-centered">Esta página te permite convertir temperaturas entre Celsius, Fahrenheit y Kelvin. <br>Introduce un valor numérico y selecciona la unidad desde donde deseas convertir. <br><br> Abajo en cada tarjeta encontraras el resultado 🌡️</p>
+        </div>
+        <div class="container-form">
+            <form id="form" class="input-temperature">
+              <label id="text-input" for="temperature-value">Temperatura:</label>
+              <input id="temperature-value" type="text" name="temperature">
+              <label for="type-temperature">Unidad:</label>
               <select id="type-temperature" name="unit">
                 <option id="default" value="default">Selecciona</option>
                 <option value="celsius">Celsius</option>
                 <option value="fahrenheit">Fahrenheit</option>
                 <option value="kelvin">Kelvin</option>
               </select>
-            </span>
-          </span>
-          <button id="btn-converter">Convertir</button>
+              <button id="btn-converter" type="submit">Convertir</button>
+              <p id="error-message" class="hide"></p>
+            </form>
         </div>
         <div class="container-cards">
           <div class="temperature-card">

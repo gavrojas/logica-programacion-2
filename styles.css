@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(177, 207, 145);
+  background-color: rgb(206, 234, 175);
   font-size: 2.5vh;
 }
 
@@ -33,10 +33,6 @@ h2{
   color: #FAFAFA;
 }
 
-p{
-  text-align: center;
-}
-
 option, button, select{
   font-size: 2vh;
 }
@@ -54,7 +50,7 @@ main{
   gap: 24px;
 }
 
-.container-input{
+.container-form{
   width: 100%; 
   display: flex;
   align-items: center;
@@ -88,25 +84,30 @@ main{
   margin: 10px 0;
 }
 
+#error-message{
+  color: rgb(149, 0, 0);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
 @media(max-width: 600px) {
   body{
     margin: 30px 0;
     height: 100%;
   }
 
-  p{
-    text-align: left;
-  }
-
-  .container-input{
+  .container-form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .inputs{
-    display: flex;
-    gap: 12px;
   }
 
   #type-temperature{
