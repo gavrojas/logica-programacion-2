@@ -3,5 +3,5 @@
 
 *El resultado es impreso en las cards y por consola*
 
-- [ ] Pendiente responsible mobile, diseño botón convertir y mejorar experiencia unidad a escoger.
+- [ ] Pendiente responsive mobile, diseño botón convertir y mejorar experiencia unidad a escoger.
 
