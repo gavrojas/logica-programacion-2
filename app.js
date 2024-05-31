@@ -1,6 +1,11 @@
 //Defino mis constantes globales
-const formConvertir = document.getElementById('form')
-const errorMessage = document.getElementById('error-message')
+const formConvertir = document.getElementById('form');
+// Capturar 'p's 
+const celsiusValue = document.getElementById('text-celsius');
+const fahrenheitValue = document.getElementById('text-fahrenheit');
+const kelvinValue = document.getElementById('text-kelvin');
+const errorMessage = document.getElementById('error-message');
+let celsius, fahrenheit, kelvin;
 
 //Escuchar evento submit form
 formConvertir.addEventListener('submit', (e) => {
@@ -13,12 +18,11 @@ formConvertir.addEventListener('submit', (e) => {
 
   //Convertir input de termperatura en valor númerico.
   let gradosAConvertir = parseFloat(inputTemperature);
-  let celsius, fahrenheit, kelvin
 
   // Verifico que el input de temperatura si sea un número si no, imprimo mensaje de error por temperatura inválida
   if(typeof(gradosAConvertir) == 'number' && isFinite(gradosAConvertir) ){
-    errorMessage.classList.add("hide")
-    errorMessage.classList.remove("show")
+    errorMessage.classList.add("hide");
+    errorMessage.classList.remove("show");
     switch(unitTemperature){
       case 'celsius':
         celsius = gradosAConvertir;
@@ -38,24 +42,28 @@ formConvertir.addEventListener('submit', (e) => {
 
       //imprimo mensaje de error por unidad no escogida y me salgo de la función
       default: 
-        errorMessage.innerText = `Ups 😶! \n Por favor selecciona al menos una unidad`
-        errorMessage.classList.add("show")
-        errorMessage.classList.remove("hide")
-        return
+        errorMessage.innerText = `Ups 😶! \n Por favor selecciona al menos una unidad`;
+        errorMessage.classList.add("show");
+        errorMessage.classList.remove("hide");
+        return;
     }
   } 
 
   //imprimo mensaje de error por temperatura errónea y me salgo de la función
   else{
-    errorMessage.innerText = `Ups 😶! \n Por favor escribe nuevamente un valor válido para temperatura`
-    errorMessage.classList.add("show")
-    errorMessage.classList.remove("hide")
+    errorMessage.innerText = `Ups 😶! \n Por favor escribe nuevamente un valor válido para temperatura`;
+    errorMessage.classList.add("show");
+    errorMessage.classList.remove("hide");
     return
   }
 
-  console.log(`${celsius}, ${fahrenheit}, ${kelvin}`);
-  console.log(typeof(gradosAConvertir));
-  console.log(unitTemperature);
+  celsiusValue.innerText = celsius.toFixed(2);
+  fahrenheitValue.innerText = fahrenheit.toFixed(2);
+  kelvinValue.innerText = kelvin.toFixed(2);
+
+  console.log(`Resultado en celsius: ${celsius} \nResultado en fahrenheit: ${fahrenheit} \nResultado en kelvin: ${kelvin}`);
+  console.log(`Formato: ${typeof(gradosAConvertir)}`);
+  console.log(`Unidad elegida: ${unitTemperature}`);
 })
 
 

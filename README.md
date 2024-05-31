@@ -1,4 +1,7 @@
 # SA-LPD2 - PRÁCTICA DE CONVERSIONES DE TEMPERATURAS.
 ## Ejercicio lógica - Bootcamp Generation. 
 
-Pendiente imprimir resultado por DOM, responsible mobile y diseño botón. 
+*El resultado es impreso en las cards y por consola*
+
+- [ ] Pendiente responsible mobile, diseño botón convertir y mejorar experiencia unidad a escoger.
+
